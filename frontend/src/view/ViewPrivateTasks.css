@@ -1,0 +1,77 @@
+/* ViewPrivateTasks.css */
+
+/* General Styles */
+.view-private-tasks-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.view-private-tasks-heading {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.view-private-tasks-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.view-private-tasks-item {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.view-private-tasks-item:hover {
+    transform: translateY(-5px);
+}
+
+.view-private-tasks-button {
+    background-color: #5e8d93;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.view-private-tasks-button:hover {
+    background-color: #4c7a7f;
+}
+
+.view-private-tasks-pagination {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.view-private-tasks-pagination-button {
+    background-color: #af5f3c;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+    margin: 0 5px;
+}
+
+.view-private-tasks-pagination-button:hover {
+    background-color: #8e4b2e;
+}
+
+.view-private-tasks-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}

@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '3000:80'
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_HOST: 'mysql'
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'andrei1234'
+      MYSQL_DATABASE: 'tasks_app'
+      PORT: '8080'
+      ACCESS_TOKEN_SECRET: '141b3b32fd17226d819697a3c055bb31f238fbff24644c8d2c2bd8c908e1caa514ac8c3ed47e2b75c151136d15ac14839f1ff6a85efb5820cf8639e348c1dd30'
+    ports:
+      - '8080:8080'
+    depends_on:
+      - mysql
+    volumes:
+      - ./backend:/app
+    command: npm start
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 'andrei1234'
+      MYSQL_DATABASE: 'tasks_app'
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - '3306:3306'
+
+volumes:
+  mysql-data:

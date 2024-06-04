@@ -1,0 +1,104 @@
+/* ViewTasks.css */
+
+/* General Styles */
+.app-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #003366, #004080);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tasks-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .task-item > div {
+    flex-grow: 1;
+  }
+  
+  .task-item h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .task-item p {
+    margin: 0;
+    color: #ddd;
+  }
+  
+  .details-button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details-button:hover {
+    background-color: #ff4d4d;
+  }
+  
+  .loading-text {
+    text-align: center;
+    color: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .task-item {
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Gradient Background */
+  body {
+    background: linear-gradient(to right, #00aaff, #004477);
+  }
+  
+  /* Neumorphism Shadow */
+  .task-item {
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3), 
+      -8px -8px 16px rgba(255, 255, 255, 0.1);
+  }
+  
